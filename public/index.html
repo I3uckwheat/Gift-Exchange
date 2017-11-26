@@ -5,14 +5,24 @@
     <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
   </head>
   <body>
-    <div class="entryForm">
-      <input type="text" id="inputBox">
-      <input type="button" value="Submit" id="submit">
+
+    <div class="welcome active">
+      <h2>Welcome Page</h2>
+      <p>Needs information and formatting</p>
+      <div class="loginContainer">
+        <input type="button" value="Login" id="login">
+      </div>
     </div>
 
-    <div class="signInBox">
-      <input type="button" id="signIn" value="Sign In">
-      <input type="button" id="signOut" value="Sign Out">
+    <div class="infoEntry inactive">
+      <h2>Info Submission to DB</h2>
+      <p>Needs information and entry form for information</p>
+      <input type="button"  value="Submit" class="submitInfo"/> <!-- currently just moves to the next page to prevent axcess writes to the database (keeps cost low while testing) -->
+    </div>
+
+    <div class="directions inactive">
+      <h2>Thanks you for regestering</h2>
+      <p>These are the directions for what to do next.</p> <!-- auto logout -->
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
