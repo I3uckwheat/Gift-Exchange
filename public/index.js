@@ -25,11 +25,11 @@ function toggleActiveContent(contentContainer){
   //   console.log("FAILED");
   // });
 
-function writeEntryToDataBase(item) {
-  firebase.database().ref('entry/' + item).set({
-    entry: item
-  });
-}
+// function writeEntryToDataBase(item) {                         to add data to DB
+//   firebase.database().ref('entry/' + item).set({
+//     entry: item
+//   });
+// }
 
 
 // module.exports = {
