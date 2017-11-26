@@ -2,17 +2,36 @@ const provider = new firebase.auth.GoogleAuthProvider();
 const infoEntryPage = document.getElementById("infoEntry");
 const directionPage = document.getElementById("directions");
 
-document.querySelector("#login").addEventListener("click", function() {
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    var token = result.credential.accessToken;
-    var user = result.user;
-  }).catch(function(error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    var email = error.email;
-    var credential = error.credential;
-  });
+//Development: Remove for prod
+const welcome = document.getElementById("welcome");
+
+const loginToggle = document.getElementById("loginToggle");
+loginToggle.addEventListener("click", function() {
+  if(loginToggle.checked) {
+    toggleActiveContent(infoEntryPage);
+  } else {
+    toggleActiveContent(welcome);
+  }
 })
+
+const submitBtn = document.getElementById("submit");
+submitBtn.addEventListener("click", function() {
+  toggleActiveContent(directionPage);
+});
+// END
+
+// DISABLED FOR DEV ENV
+// document.querySelector("#login").addEventListener("click", function() {
+//   firebase.auth().signInWithPopup(provider).then(function(result) {
+//     var token = result.credential.accessToken;
+//     var user = result.user;
+//   }).catch(function(error) {
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     var email = error.email;
+//     var credential = error.credential;
+//   });
+// })
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
