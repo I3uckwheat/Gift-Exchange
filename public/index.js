@@ -2,8 +2,7 @@ const submitButton = document.querySelector("#submit");
 const inputBox = document.querySelector("#inputBox");
 const provider = new firebase.auth.GoogleAuthProvider();
 
-
-function signIn() {
+document.querySelector("#signIn").addEventListener("click", function() {
   firebase.auth().signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
@@ -13,8 +12,15 @@ function signIn() {
     var email = error.email;
     var credential = error.credential;
   });
-  return user;
-}
+})
+
+document.querySelector("#signOut").addEventListener("click", function() {
+  firebase.auth().signOut().then(function() {
+    console.log("Signed Out");
+  }).catch(function(error) {
+    console.log("FAILED");
+  });
+})
 
 submitButton.addEventListener("click", function(){
   const text = inputBox.value;
