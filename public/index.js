@@ -1,4 +1,6 @@
 const provider = new firebase.auth.GoogleAuthProvider();
+const infoEntryPage = document.getElementById("infoEntry");
+const directionPage = document.getElementById("directions");
 
 document.querySelector("#login").addEventListener("click", function() {
   firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -12,11 +14,21 @@ document.querySelector("#login").addEventListener("click", function() {
   });
 })
 
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    toggleActiveContent(infoEntryPage)
+  } else {
+    //user is not signed in
+  }
+});
+
 function toggleActiveContent(contentContainer){
   const currentActiveContent = document.querySelector('.active');
   currentActiveContent.classList.replace('active', 'inactive');
-  contentContainer.classList.add('active');
+  contentContainer.classList.replace('inactive', 'active');
 }
+
+
 
 
   // firebase.auth().signOut().then(function() {                 to sign out

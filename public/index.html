@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <div class="welcome active">
+    <div class="content active" id="welcome">
       <h2>Welcome Page</h2>
       <p>Needs information and formatting</p>
       <div class="loginContainer">
@@ -14,15 +14,21 @@
       </div>
     </div>
 
-    <div class="infoEntry inactive">
+    <div class="content inactive" id="infoEntry">
       <h2>Info Submission to DB</h2>
       <p>Needs information and entry form for information</p>
-      <input type="button"  value="Submit" class="submitInfo"/> <!-- currently just moves to the next page to prevent axcess writes to the database (keeps cost low while testing) -->
+      <input type="button"  value="Submit" class="submitInfo"/> <!-- submit button currently just moves to the next page to prevent axcess writes to the database (keeps cost low while testing) -->
     </div>
 
-    <div class="directions inactive">
+    <div class="content inactive" id="directions">
       <h2>Thanks you for regestering</h2>
       <p>These are the directions for what to do next.</p> <!-- auto logout -->
+    </div>
+
+    <!--Testing stuff below -->
+
+    <div class="testingPanel">
+        <label>LoggedIn <input type="checkbox" name="loginStatus" id="loginToggle"></label>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
