@@ -1,8 +1,6 @@
-const submitButton = document.querySelector("#submit");
-const inputBox = document.querySelector("#inputBox");
 const provider = new firebase.auth.GoogleAuthProvider();
 
-document.querySelector("#signIn").addEventListener("click", function() {
+document.querySelector("#login").addEventListener("click", function() {
   firebase.auth().signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
@@ -14,18 +12,18 @@ document.querySelector("#signIn").addEventListener("click", function() {
   });
 })
 
-document.querySelector("#signOut").addEventListener("click", function() {
-  firebase.auth().signOut().then(function() {
-    console.log("Signed Out");
-  }).catch(function(error) {
-    console.log("FAILED");
-  });
-})
+function toggleActiveContent(contentContainer){
+  const currentActiveContent = document.querySelector('.active');
+  currentActiveContent.classList.replace('active', 'inactive');
+  contentContainer.classList.add('active');
+}
 
-submitButton.addEventListener("click", function(){
-  const text = inputBox.value;
-  writeEntryToDataBase(text);
-});
+
+  // firebase.auth().signOut().then(function() {                 to sign out
+  //   console.log("Signed Out");
+  // }).catch(function(error) {
+  //   console.log("FAILED");
+  // });
 
 function writeEntryToDataBase(item) {
   firebase.database().ref('entry/' + item).set({
