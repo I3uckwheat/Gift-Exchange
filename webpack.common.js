@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: __dirname + '/public/src/GiftExchange/GiftExchange.js',
   output: {
-    filename: 'AdminPanel.js',
+    filename: 'GiftExchange.js',
     path: path.resolve(__dirname, 'public/dist/GiftExchange/')
   },
   plugins: [new HtmlWebpackPlugin({
