@@ -8,7 +8,12 @@ module.exports = merge(common, {
     ignored: /node_modules/,
   },
   devtool: 'source-map',
-  serve: {
-    port: 3000
-  }
 });
+
+module.exports.serve = {
+  port: 3000,
+  add: (app, middleware, options) => {
+    middleware.webpack();
+    middleware.content();
+  }
+}
