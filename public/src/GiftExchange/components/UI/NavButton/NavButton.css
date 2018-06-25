@@ -1,0 +1,21 @@
+.NavButton:active {
+  background-color: green;
+}
+.NavButton {
+  bdisplay: inline-block;
+  border: 1px solid grey;
+  height: 50px;
+  width: 150px;
+  text-decoration: none;
+  text-decoration-line: none; text-align: center;
+}
+
+.NavButton div h2 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+.active {
+  border-top: 4px solid green;
+}
