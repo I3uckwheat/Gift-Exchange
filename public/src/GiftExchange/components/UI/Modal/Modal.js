@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 import Backdrop from './Backdrop/Backdrop';
 import RegisterModal from './RegisterModal/RegisterModal';
+import LoginModal from './LoginModal/LoginModal';
 
 import style from './Modal.css';
 
@@ -13,7 +14,10 @@ const Modal = (props) => {
   let modalContent = null;
   switch(props.type){
     case 'register':
-      modalContent = (<RegisterModal/>);
+    modalContent = (<RegisterModal />);
+      break;
+    case 'login':
+      modalContent = (<LoginModal />);
       break;
   }
 
