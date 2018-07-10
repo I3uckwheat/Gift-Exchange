@@ -4,7 +4,7 @@ import Header from './Header/Header';
 
 const Layout = props => (
   <Fragment>
-    <Header />
+    <Header user={props.user}/>
     {props.children}
   </Fragment>
 );

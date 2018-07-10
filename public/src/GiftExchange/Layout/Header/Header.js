@@ -10,7 +10,7 @@ const Header = props => (
     <div>
       <h1>TOP GIft Exchange!</h1>
     </div>
-    <Navigation />
+    <Navigation user={props.user} />
   </div>
 );
 

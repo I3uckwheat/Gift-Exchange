@@ -1,15 +1,25 @@
-import React from 'react';
-import {BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Layout from './Layout/Layout';
 
 
-const App = () => (
-  <BrowserRouter>
-    <Layout>
+class App extends Component {
+  state = {
+    user: {
+      loggedIn: false
+    }
+  }
 
-    </Layout>
-  </BrowserRouter>
-);
+  render() {
+    return (
+      <BrowserRouter>
+        <Layout user={this.state.user}>
+
+        </Layout>
+      </BrowserRouter >
+    )
+  }
+};
 
 export default App;
