@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { Component, Fragment } from 'react';
+import {  Switch, Route } from 'react-router-dom';
 
-import Layout from './Layout/Layout';
+import Classes from "./App.css";
+
+import Left from './Layout/Left/Left';
+import Right from './Layout/Right/Right';
 
 
 class App extends Component {
@@ -13,11 +16,10 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <Layout user={this.state.user}>
-
-        </Layout>
-      </BrowserRouter >
+      <div className={Classes.App}>
+        <Left />
+        <Right />
+      </div>
     )
   }
 };

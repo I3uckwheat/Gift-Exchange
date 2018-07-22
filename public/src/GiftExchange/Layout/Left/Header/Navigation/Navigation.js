@@ -12,7 +12,7 @@ const Navigation = props => {
     </Fragment>
   );
 
-  if (props.user.loggedIn) {
+  if (false) {
     buttons = (
       <Fragment>
         <NavButton linkto='/account' name='Account' />
@@ -23,6 +23,7 @@ const Navigation = props => {
 
   return (
     <nav className={classes.Navigation}>
+      <NavButton linkto='/' name='Home' exact />
       {buttons}
     </nav>
   );

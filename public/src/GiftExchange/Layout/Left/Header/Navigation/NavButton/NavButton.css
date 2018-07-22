@@ -1,0 +1,14 @@
+.NavButton {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: rgba(0, 0, 0, .75); 
+}
+
+.NavButton div {
+  width: auto;
+}
+
+.selected {
+  color: green;
+  text-decoration: underline;
+}
