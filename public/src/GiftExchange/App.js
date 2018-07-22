@@ -3,8 +3,8 @@ import {  Switch, Route } from 'react-router-dom';
 
 import Classes from "./App.css";
 
-import Left from './Layout/Left/Left';
-import Right from './Layout/Right/Right';
+import Left from './Left/Left';
+import Right from './Right/Right';
 
 
 class App extends Component {
