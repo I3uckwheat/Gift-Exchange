@@ -7,8 +7,8 @@ import classes from './Navigation.css';
 const Navigation = props => {
   let buttons = (
     <Fragment>
-      <NavButton linkto='/login' name='Log In' />
       <NavButton linkto='/register' name='Register' />
+      <NavButton linkto='/login' name='Log In' />
     </Fragment>
   );
 
