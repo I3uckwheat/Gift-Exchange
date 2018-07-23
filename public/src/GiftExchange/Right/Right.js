@@ -4,7 +4,7 @@ import Classes from './Right.css';
 
 import Timer from './Timer/Timer';
 
-const Right = () => (
+const Right = (props) => (
   <div className={Classes.Right}>
     <Timer />
   </div>
