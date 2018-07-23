@@ -8,7 +8,7 @@ import classes from './Header.css';
 const Header = props => (
   <div className={classes.Header}>
     <div>
-      <h1>TOP GIft Exchange!</h1>
+      <h1>TOP Gift Exchange!</h1>
     </div>
     <Navigation user={props.user} />
   </div>
