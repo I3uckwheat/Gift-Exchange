@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import Countdown from 'countdown';
+import countdown from 'countdown';
+
+const endDate = new Date('december 25 2018');
 
 class Timer extends Component {
+  state = {
+    timeLeft: countdown(endDate)
+  };
+
+  componentDidMount() {
+    this.timerID = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      timeLeft: countdown(endDate)
+    });
+  }
+
   render() {
-    return <p>Timer</p>;
+    return <p>{this.state.timeLeft.toString()}</p>;
   }
 }
 
