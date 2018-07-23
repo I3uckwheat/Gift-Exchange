@@ -1,0 +1,25 @@
+.Home {
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.Home h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.Home p, .Home ol {
+  padding: 0 20px;
+}
+
+.Home ol {
+  text-align: left;
+  list-style-type: decimal;
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+.Home ol li {
+  margin-bottom: 10px;
+}
