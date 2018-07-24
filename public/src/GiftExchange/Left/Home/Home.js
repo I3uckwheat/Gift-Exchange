@@ -19,7 +19,7 @@ const Home = () => (
       <li>Wait for the timer to run out, (You will also receive an email)</li>
       <li>Find out something about your partner</li>
       <li>Mail them something cool!</li>
-      <li>(optional, but reccomended) Send the tracking number to your partner through the interface</li>
+      <li>(optional, but recommended) Send the tracking number to your partner through the interface</li>
       <li>Say, "Hi!" to your partner through an email once you have both received your gift</li>
       <li>Post a picture of yourself with your gift to show the world what you received!</li>
     </ol>
