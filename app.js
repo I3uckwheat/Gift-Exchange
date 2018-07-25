@@ -30,17 +30,30 @@ app.get(
   passport.authenticate('github', { failureRedirect: '/api' }),
   (req, res) => {
     // console.log(req.user);
-    res.redirect('/api');
+    res.redirect('/');
   }
 );
 
+app.get('/api/auth/status', (req, res) => {
+  console.log(req.session);
+  if (req.user) {
+    console.log('logged in')
+    res.json({ user: req.user });
+  } else {
+    console.log('not logged in')
+    res.json({
+      user: null
+    });
+  }
+});
+
 app.get('/api/logout', (req, res) => {
   if (req.user) {
-    return res.send("You're already logged out")
+    return res.send("You're already logged out");
   }
   req.logout();
-  res.redirect('/api')
-})
+  res.redirect('/api');
+});
 
 app.use('/api', (req, res) => {
   console.log('req.user: ', req.user);

@@ -12,6 +12,14 @@ class App extends Component {
     }
   };
 
+  componentDidMount() {
+    fetch('/api/auth/status', { credentials: 'same-origin' })
+      .then(res => res.json())
+      .then(result => {
+        this.setState({ user: { loggedIn: true } });
+      });
+  }
+
   render() {
     return (
       <div className={Classes.App}>

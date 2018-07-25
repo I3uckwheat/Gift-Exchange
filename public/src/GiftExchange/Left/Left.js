@@ -5,16 +5,14 @@ import Classes from './Left.css';
 
 import Header from './Header/Header';
 import Home from './Home/Home';
-import Login from './Login/Login';
-import Register from './Register/Register';
+import GithubLogin from './GithubLogin/GithubLogin';
 
 const Left = () => (
   <div className={Classes.Left}>
     <Header />
     <Switch>
       <Route path="/" component={Home} exact />
-      <Route path="/login" component={Login} />
-      <Route path="/register" component={Register} />
+      <Route path="/login" component={GithubLogin} />
     </Switch>
   </div>
 );

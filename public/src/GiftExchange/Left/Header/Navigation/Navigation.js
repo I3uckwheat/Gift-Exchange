@@ -7,15 +7,13 @@ import classes from './Navigation.css';
 const Navigation = props => {
   let buttons = (
     <Fragment>
-      <NavButton linkto='/register' name='Register' />
-      <NavButton linkto='/login' name='Log In' />
+      <NavButton linkto='/login' name='Log In With Github' />
     </Fragment>
   );
 
   if (false) {
     buttons = (
       <Fragment>
-        <NavButton linkto='/account' name='Account' />
         <NavButton linkto='/logout' name='Log Out' />
       </Fragment>
     );
