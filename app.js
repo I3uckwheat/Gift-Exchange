@@ -48,11 +48,11 @@ app.get('/api/auth/status', (req, res) => {
 });
 
 app.get('/api/logout', (req, res) => {
-  if (req.user) {
+  if (!req.user) {
     return res.send("You're already logged out");
   }
   req.logout();
-  res.redirect('/api');
+  res.status(200).send();
 });
 
 app.use('/api', (req, res) => {

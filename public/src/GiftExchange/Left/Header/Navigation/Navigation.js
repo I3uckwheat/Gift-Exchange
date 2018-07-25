@@ -11,7 +11,7 @@ const Navigation = props => {
     </Fragment>
   );
 
-  if (false) {
+  if (props.user.isLoggedIn) {
     buttons = (
       <Fragment>
         <NavButton linkto='/logout' name='Log Out' />

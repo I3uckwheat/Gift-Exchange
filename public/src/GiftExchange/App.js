@@ -8,22 +8,29 @@ import Right from './Right/Right';
 class App extends Component {
   state = {
     user: {
-      loggedIn: false
+      isLoggedIn: false
     }
   };
+
+  logoutHandler() {
+    fetch('/api/logout', { credentials: 'same-origin' }).then(() => {
+      this.setState({ user: { isLoggedIn: false } });
+    });
+  }
 
   componentDidMount() {
     fetch('/api/auth/status', { credentials: 'same-origin' })
       .then(res => res.json())
       .then(result => {
-        this.setState({ user: { loggedIn: true } });
+        console.log(result);
+        if (result.user) return this.setState({ user: { isLoggedIn: true } });
       });
   }
 
   render() {
     return (
       <div className={Classes.App}>
-        <Left />
+        <Left user={this.state.user} logoutHandler={(history) => this.logoutHandler(history)} />
         <Right />
       </div>
     );
