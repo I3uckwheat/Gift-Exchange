@@ -5,6 +5,7 @@
   height: 99vh;
   width: auto;
   overflow: hidden;
+  z-index: -1;
 }
 
 .Tree img {
