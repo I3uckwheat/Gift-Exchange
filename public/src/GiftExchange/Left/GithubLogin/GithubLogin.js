@@ -1,5 +1,5 @@
 import React from 'react';
-import githubImg from '../../../images/github-logo.png';
+import githubImg from './github-logo.png';
 
 import Classes from './GithubLogin.css';
 
