@@ -1,0 +1,16 @@
+.Tree {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 99vh;
+  width: auto;
+  overflow: hidden;
+}
+
+.Tree img {
+  position: relative;
+  right: -50%;
+  bottom: -8px;
+  height: 100%;
+  width: auto;
+}

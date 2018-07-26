@@ -22,7 +22,6 @@ class App extends Component {
     fetch('/api/auth/status', { credentials: 'same-origin' })
       .then(res => res.json())
       .then(result => {
-        console.log(result);
         if (result.user) return this.setState({ user: { isLoggedIn: true } });
       });
   }
