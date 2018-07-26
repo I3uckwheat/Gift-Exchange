@@ -10,6 +10,7 @@ const Right = props => (
   <div className={Classes.Right}>
     <Timer user={props.user} />
     <Tree />
+    <Gifts />
   </div>
 );
 

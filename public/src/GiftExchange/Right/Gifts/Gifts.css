@@ -1,0 +1,13 @@
+.Gifts {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.Gifts img {
+  position: relative;
+  height: 30vh;
+  bottom: -10px;
+}
