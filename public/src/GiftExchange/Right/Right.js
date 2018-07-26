@@ -5,9 +5,9 @@ import Classes from './Right.css';
 import Timer from './Timer/Timer';
 import Tree from './Tree/Tree';
 
-const Right = (props) => (
+const Right = props => (
   <div className={Classes.Right}>
-    <Timer />
+    <Timer user={props.user} />
     <Tree />
   </div>
 );

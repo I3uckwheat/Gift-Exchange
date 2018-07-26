@@ -30,7 +30,7 @@ class Timer extends Component {
       <div className={Classes.Timer}>
         <h2>There are only: </h2>
         <p>{this.state.timeLeft.toString()}</p>
-        {this.props.user ? <h2>left to wait!</h2> : <h2>left to sign up!</h2>}
+        {this.props.user.isLoggedIn ? <h2>left to wait!</h2> : <h2>left to sign up!</h2>}
       </div>
     );
   }

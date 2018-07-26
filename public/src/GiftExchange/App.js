@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className={Classes.App}>
         <Left user={this.state.user} logoutHandler={(history) => this.logoutHandler(history)} />
-        <Right />
+        <Right user={this.state.user} />
       </div>
     );
   }
